@@ -8,34 +8,17 @@ using namespace std;
 
 class HashTable {
 private:
-    static const int hashGroups = 11;
+    static const int hashGroups = 11; //sets hash to 11
     list<pair<string, string>> table[hashGroups];
 
 
 public:
     bool isEmpty() const;
     int hashFunction(int key_num);
-    void insertItem(int key_num, string key, string value);
+    void insertItem(int key_num, string key, string value); //takes a key number and two strings, a string KEY and string VALUE
     void printTable();
 
 };
-
-
-bool HashTable::isEmpty() const {
-    int sum{};
-    for (int i{}; i < hashGroups; i++)
-    {
-        sum += table[i].size();
-    }
-
-
-    if
-        (!sum) {
-        return true;
-    }
-    return false;
-
-}
 
 
 
@@ -60,11 +43,11 @@ void HashTable::insertItem(int key_num, string key, string value) {
 
 void HashTable::printTable() {
     for (int i{}; i < hashGroups; i++) {
-        if (table[i].size() == 0) continue;
+        if (table[i].size() == 0) continue; //limits the creation of hashes to the number specified in const int hashgroups
 
         auto bItr = table[i].begin();
         for (; bItr != table[i].end(); bItr++) {
-            cout << "Key: " << bItr->first << "Value: " << bItr->second << endl;
+            cout << "Key: " << bItr->first << "Value: " << bItr->second << endl; // will display only the strings
         }
 
 
@@ -124,22 +107,6 @@ public:
 };
 
 
-bool HashTable1::isEmpty1() const {
-    int sum{};
-    for (int i{}; i < hashGroups1; i++)
-    {
-        sum += table[i].size();
-    }
-
-
-    if
-        (!sum) {
-        return true;
-    }
-    return false;
-
-}
-
 
 
 int HashTable1::hashFunction1(int key_num1) {
@@ -167,7 +134,7 @@ void HashTable1::printTable1() {
 
         auto bItr = table[i].begin();
         for (; bItr != table[i].end(); bItr++) {
-            cout << "Key: " << bItr->second << endl;
+            cout << "Key: " << bItr->second << endl; // will display just the key
         }
 
 
@@ -199,15 +166,53 @@ void IntitializeUnknownResponses() {
 
 
 
-// -------------------------------------------MAIN----------------------------------------------------- //
+
+
+//MainMenu() function
+
+void MainMenu() {
+    cout << "Welcome to CHATBOT! Let's have a talk." << endl;
+    cout << "Enter '1' now to connect to a bot or press '0' to exit the program." << endl;
+    int answer;
+    cin >> answer;
+
+    while (answer != 1 && answer != 0)
+    {
+        cout << "Invalid input, try again" << endl;
+        cin >> answer;
+    }
+
+        if (answer == 0)
+        {
+            cout << "Goodbye" << endl;
+            exit(0);
+        }
+    
+}
+
+
+
+
+
+
+
+//Process Function
+
+void Process(int HashTable, string list) {
+
+}
+
+
+
+// -----------------------------------------------------MAIN----------------------------------------------------- //
 
 int main()
 {
 
+    MainMenu();
     IntitializeKnownResponses();
     cout << endl << endl << endl;
-    IntitializeUnknownResponses();
-
+    IntitializeUnknownResponses(); //calls the other 2 functions so far
     return 0;
 
 }
