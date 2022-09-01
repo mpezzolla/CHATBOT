@@ -467,7 +467,7 @@ void IntitializeCodingResponses() {
         HTCODING[6].insertItem1(7, "Debugging involves going into the code and evaluating any mistakes that may result in a failed compile");
         HTCODING[7].insertItem1(8, "Visual Studio was made in 1997");
         HTCODING[8].insertItem1(9, "XCode is used for Apple MacOS and iOS products.");
-        HTCODING[9].insertItem1(10, "Using Microsoft Word as an IED is a great idea, 10/10, would highly suggest.");
+        HTCODING[9].insertItem1(10, "Using Microsoft Word as an IDE is a great idea, 10/10, would highly suggest.");
 
 
 
@@ -544,7 +544,7 @@ void IntitializeCodingResponses() {
         }
         if (again_coding > 0 || again_coding < 0)
         {
-            cout << "1. IEDs, 2. Languages, 3. Arrays, 4. Variables, 5. Classes, 6. History, 7. Debugging, 8. Visual Studio, 9. XCode, 10. Using Word as an IED" << endl << endl;
+            cout << "1. IDEs, 2. Languages, 3. Arrays, 4. Variables, 5. Classes, 6. History, 7. Debugging, 8. Visual Studio, 9. XCode, 10. Using Word as an IDE" << endl << endl;
         }
 
 
@@ -762,7 +762,7 @@ void choice_2() {
     room.join(&Marco);
     room.join(&bot);
     bot.say("What do you want to talk about? Enter the number that corrisponds with the topic");
-    bot.say("1. IEDs, 2. Languages, 3. Arrays, 4. Variables, 5. Classes, 6. History, 7. Debugging, 8. Visual Studio, 9. XCode, 10. Using Word as an IED");
+    bot.say("1. IDEs, 2. Languages, 3. Arrays, 4. Variables, 5. Classes, 6. History, 7. Debugging, 8. Visual Studio, 9. XCode, 10. Using Word as an IDE");
     IntitializeCodingResponses();
 
 }
